@@ -69,3 +69,38 @@ describe("isEven", function(){
     it('should return false when not given an argument', function () {expect(isEven()).toBe(false)
     });
 });
+
+describe("isVowel", function(){
+    it('should return a boolean', function () {expect(typeof isVowel()).toBe( "boolean")
+    });
+    it('should return true when passed "a" ', function () {expect(isVowel("a")).toBe(true)
+    });
+    it('should return true when passed "A" ', function () {expect(isVowel("A")).toBe(true);
+    });
+    it('should return false when passed "y" ', function () {expect(isVowel("y")).toBe(false)
+    });
+    it('should return false when passed the number 4', function () {expect(isVowel(4)).toBe(false)
+    });
+    it('should return false when passed a boolean value', function () {expect(isVowel(typeof "boolean")).toBe(false)
+    });
+    it('should return false when passed "banana" ', function () {expect(isVowel("banana")).toBe(false)
+    });
+    it('should return false when passed nothing', function () {expect(isVowel()).toBe(false)
+    });
+})
+describe("toAdd",function (){
+    it('should return 5 when passed 2 and 3', function () {expect(toAdd(2,3)).toBe(5)
+    });
+    it('should return -12 when passed -3 and -9', function () {expect(toAdd(-3,-9)).toBe(-12)
+    });
+    it('should return 11 when passed "5" and 6', function () {expect(toAdd("5", 6)).toBe(11)
+    });
+    it('should return 6 when passed "-4" and "10" ', function () {expect(toAdd("-4", "10")).toBe(6)
+    });
+    it('should return NaN when passed "banana" and "split" ', function () {expect(toAdd("banana", "split")).toBeNaN()
+    });
+    it('should return NaN when passed 2 and "apples" ', function () {expect(toAdd(2, "apples")).toBeNaN()
+    });
+    it('should return NaN when not passed any input', function () {expect(toAdd()).toBeNaN()
+    });
+})
