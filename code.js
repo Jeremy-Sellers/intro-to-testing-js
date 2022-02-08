@@ -17,5 +17,19 @@ return input == 5;
 };
 
 function isEven(input){
-return input % 2 === 0
+return input % 2 == 0
+}
+
+function isVowel(input) {
+    if (input == "a") {
+        return true
+    } else if (input == "A") {
+        return true
+    } else {
+        return false
+    }
+}
+
+function toAdd(num1, num2){
+    return Number(num1) + Number(num2);
 }
